@@ -52,4 +52,19 @@ public class Stack {
         }
     }
 
+    @Override
+    public String toString(){
+        StringBuilder str = new StringBuilder();
+        if(top == null)
+            return "Empty";
+        else{
+            Node _topNode = top;
+            while(_topNode != null){
+                str.append(_topNode.data + " ");
+                _topNode = _topNode.link;
+            }
+            return str.toString();
+        }
+    }
+
 }
