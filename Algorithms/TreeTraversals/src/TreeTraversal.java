@@ -41,6 +41,10 @@ public class TreeTraversal {
     public void depthFirstSearch(Graph graph, int start){
 
         boolean visited[] = new boolean[graph.getVerticeSize()];
+        //Initialize visited as false
+        for(int i =0;i<graph.getVerticeSize(); i++){
+            visited[i] = false;
+        }
 
         DFSUtil(visited, start, graph);
     }
